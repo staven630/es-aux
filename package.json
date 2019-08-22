@@ -18,7 +18,7 @@
     "commit": "git-cz",
     "commit:retry": "git-cz --retry",
     "commit:noverify": "git-cz --no-verify",
-    "precommit": "npm run build && lint-staged && npm run test",
+    "precommit": "lint-staged && npm run test && npm run build",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint src --ext .ts,.tsx",
