@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "target": "es5",
+    "module": "es6",
+    "noImplicitAny": true,
+    "sourceMap": false,
+    "outDir": "./lib",
+    "lib": ["dom", "es7"],
+    "declaration": true,
+    "declarationDir": "./lib",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "noEmit": true
+  },
+  "include": ["src/main.ts"],
+  "exclude": ["node_modules"]
+}
