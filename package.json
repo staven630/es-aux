@@ -18,7 +18,7 @@
     "commit": "git-cz",
     "commit:retry": "git-cz --retry",
     "commit:noverify": "git-cz --no-verify",
-    "precommit": "npm run build && lint-staged",
+    "precommit": "npm run build && lint-staged && npm run test",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint src --ext .ts,.tsx",
@@ -81,8 +81,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run precommit",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "npm run test"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
