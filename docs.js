@@ -5,11 +5,10 @@ const path = require('path')
 
 
 /* input and output paths */
-const inputFile = './docs/docs.js'
-const outputDir = `${__dirname}/docs`
+const inputFile = './dist/es-aux.js'
+const outputDir = `${__dirname}`
 /* get template data */
 const templateData = jsdoc2md.getTemplateDataSync({ files: inputFile })
-console.log(templateData)
 /* reduce templateData to an array of class names */
 // const classNames = templateData.reduce((classNames, identifier) => {
 //   if (identifier.kind === 'class') classNames.push(identifier.name)
@@ -25,19 +24,16 @@ console.log(templateData)
 // }
 
 
-
 const bodyParamsList = `{{#if params}}
 {{#params}}**参数**
 
 {{#each this~}}
 {{indent}}- {{name}}{{#if type}} {{>linked-type-list types=type.names delimiter=" | " }}{{/if}}{{#unless (equal defaultvalue undefined)}} {{>defaultvalue equals=true ~}}{{/unless}}{{#if description}} - {{{inlineLinks description}}}{{/if}}
 {{/each}}
-
 {{/params~}}
 {{/if}}`
 
 const bodyParamsTable = `{{#if params}}
-
 {{tableHead params "name|参数" "type|类型" "defaultvalue|默认值" "description|描述" ~}}
 
 {{#tableRow params "name" "type" "defaultvalue" "description" ~}}
@@ -93,14 +89,14 @@ ${body}
 {{/orphans~}}`
 
 
-let template = `
-# es-aux
+let template = `# es-aux
 &emsp;&emsp;JavaScript开发辅助函数库。
 
+# 函数
 {{#if (showMainIndex)~}}
 {{>module-index~}}
 {{/if~}}
 ${allDocs}
 `
 const output = jsdoc2md.renderSync({ data: templateData, template })
-fs.writeFileSync(path.resolve(outputDir, `doc.md`), output)
+fs.writeFileSync(path.resolve(outputDir, `README.md`), output)

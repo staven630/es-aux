@@ -1,7 +1,10 @@
+# es-aux
+&emsp;&emsp;JavaScript开发辅助函数库。
+
+# 函数
 <a id="getHighlightList"></a>
 ## getHighlightList(keyword, fulltext)
 &emsp;&emsp;获取高亮分词列表
-
 
 
 | 参数 | 类型 | 描述 |
@@ -13,7 +16,6 @@
 <a id="getHighlightTemplate"></a>
 ## getHighlightTemplate(keyword, fulltext, tag, classname)
 &emsp;&emsp;获取高亮分词模板
-
 
 
 | 参数 | 类型 | 描述 |
@@ -29,7 +31,6 @@
 &emsp;&emsp;获取高亮分词具有tag参数，则返回该参数包裹的字符串否则返回数组对象
 
 
-
 | 参数 | 类型 | 描述 |
 | --- | --- | --- |
 | keyword | <code>string</code> | <code>regexp</code> | 关键字 |
@@ -43,7 +44,6 @@
 &emsp;&emsp;驼峰命名转换为短横线命名
 
 
-
 | 参数 | 类型 | 描述 |
 | --- | --- | --- |
 | text | <code>string</code> | 需要转换的驼峰命名的字符串 |
@@ -54,7 +54,6 @@
 &emsp;&emsp;短横线命名转换为驼峰命名
 
 
-
 | 参数 | 类型 | 描述 |
 | --- | --- | --- |
 | text | <code>string</code> | 需要转换的短横线命名的字符串 |
@@ -63,7 +62,6 @@
 <a id="randomString"></a>
 ## randomString(len) ⇒ <code>string</code>
 &emsp;&emsp;随机生成长度为len的字符串
-
 
 
 | 参数 | 类型 | 描述 |

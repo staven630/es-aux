@@ -96,7 +96,7 @@ export default [
   {
     input: 'src/main.ts',
     output: {
-      file: 'docs/docs.js',
+      file: pkg.module.replace('.esm', ''),
       format: 'es',
       indent: false,
     },
