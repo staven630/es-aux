@@ -113,6 +113,5 @@ import { camelToKebab } from 'es-aux'
 {{/if~}}
 ${allDocs}
 `
-console.log(templateData)
 const output = jsdoc2md.renderSync({ data: templateData, template })
 fs.writeFileSync(path.resolve(outputDir, `README.md`), output)
