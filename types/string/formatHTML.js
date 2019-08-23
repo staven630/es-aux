@@ -12,7 +12,7 @@ export function formatHTML(str) {
     str = str.replace(/<li>/gi, ' * ');
     str = str.replace(/<\/ul>/gi, '\n');
     str = str.replace(/<\/p>/gi, '\n');
-    str = str.replace(/<br\s*[\/]?>/gi, '\n');
+    str = str.replace(/<br\s*\/?>/gi, '\n');
     str = str.replace(/^\n*|<[^>]+>|\n*$/gi, '');
     str = str.replace(/<[^>]+>/gi, '');
     str = str.replace(/\n{2,}/g, '\n\n');

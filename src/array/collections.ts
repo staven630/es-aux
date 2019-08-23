@@ -6,7 +6,7 @@
  * @param {Array} a
  * @param {Array} b
  */
-export function unionArr(a, b: T[]) {
+export function unionArr<T>(a: T[], b: T[]): T[] {
   return [...new Set([...a, ...b])]
 }
 
@@ -16,7 +16,7 @@ export function unionArr(a, b: T[]) {
  * @param {Array} a
  * @param {Array} b
  */
-export function intersectArr(a: any[], b: any[]) {
+export function intersectArr<T>(a: T[], b: T[]): T[] {
   return [...new Set([...a].filter(x => b.includes(x)))]
 }
 
@@ -26,6 +26,6 @@ export function intersectArr(a: any[], b: any[]) {
  * @param {Array} a
  * @param {Array} b
  */
-export function differenceArr(a: any[], b: any[]) {
+export function differenceArr<T>(a: T[], b: T[]): T[] {
   return [...new Set([...a].filter(x => !b.includes(x)))]
 }

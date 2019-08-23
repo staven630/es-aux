@@ -36,7 +36,10 @@ export function uniqueArr(arr) {
 export function uniqueKeyInArr(arr, key) {
     var cache = {};
     return arr.reduceRight(function (item, next) {
-        cache[next[key]] ? '' : (cache[next[key]] = true && item.push(next));
+        if (!cache[next[key]]) {
+            cache[next[key]] = true;
+            item.push(next);
+        }
         return item;
     }, []);
 }

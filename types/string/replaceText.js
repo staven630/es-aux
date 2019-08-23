@@ -38,7 +38,7 @@ export function spliceText(text, start, last, replaceText) {
  */
 export function toDecimal(text, len) {
     text = text.toString();
-    if (/[^0-9\.]/.test(text) || text == null || text == '')
+    if (/[^0-9.]/.test(text) || text == null || text == '')
         return 0;
     text = text.replace(/^(\d*)$/, '$1.');
     text = (text + '00').replace(/(\d*\.\d\d)\d*/, '$1');

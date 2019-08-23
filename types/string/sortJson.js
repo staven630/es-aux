@@ -1,3 +1,5 @@
+/*eslint @typescript-eslint/no-explicit-any: ["error", { "ignoreRestArgs": false }]*/
+[].sort();
 /**
  * 根据对象数组的某字段进项排序
  *
@@ -11,16 +13,16 @@ export function sortJSON(array, key, flag) {
     var sortBy = function (filed, flag, primer) {
         var flagIndex = flag ? -1 : 1;
         return function (a, b) {
-            a = a[filed];
-            b = b[filed];
+            var a1 = +a[filed];
+            var b1 = +b[filed];
             if (typeof primer != 'undefined') {
-                a = primer(a);
-                b = primer(b);
+                a1 = primer("" + a1);
+                b1 = primer("" + b1);
             }
-            if (a < b) {
+            if (a1 < b1) {
                 return flagIndex * -1;
             }
-            if (a > b) {
+            if (a1 > b1) {
                 return flagIndex * 1;
             }
             return 1;
