@@ -4,7 +4,7 @@
 
 # 安装
 ```bash
-npm i -S es - aux
+npm i -S es-aux
 ```
 
 # 使用
