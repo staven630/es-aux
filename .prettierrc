@@ -1,11 +1,11 @@
 {
-  "printWidth": 120, // 设置单行字符数
-  "tabWidth": 2, // 缩进空格数
-  "semi": true, // 代码行后面需不需要生成分号
+  "printWidth": 120,
+  "tabWidth": 2,
+  "semi": false,
   "useTabs": false,
-  "singleQuote": true, // 使用单引号
-  "trailingComma": "none", // 数组后面最后一个索引要不要添加逗号
-  "bracketSpacing": false, // 在对象字面量声明所使用的的花括号后（{）和前（}）输出空格
-  "jsxBracketSameLine": false, // 在多行JSX元素最后一行的末尾添加 > 而使 > 单独一行（不适用于自闭和元素）
+  "singleQuote": true,
+  "trailingComma": "none",
+  "bracketSpacing": false,
+  "jsxBracketSameLine": false,
   "proseWrap": "always"
 }

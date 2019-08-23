@@ -1,71 +1,37 @@
 # es-aux
-&emsp;&emsp;JavaScript开发辅助函数库。
 
-# 函数
-<a id="getHighlightList"></a>
-## getHighlightList(keyword, fulltext)
-&emsp;&emsp;获取高亮分词列表
+&emsp;&emsp;JavaScript 开发辅助函数库。
 
+# 安装
 
-| 参数 | 类型 | 描述 |
-| --- | --- | --- |
-| keyword | <code>string</code> | 关键字 |
-| fulltext | <code>string</code> | 整段文本 |
+```bash
+npm i -S es - aux
+```
 
-----
-<a id="getHighlightTemplate"></a>
-## getHighlightTemplate(keyword, fulltext, tag, classname)
-&emsp;&emsp;获取高亮分词模板
+# 使用
 
+```js
+const Aux = require('es-aux')
+// or
+const {camelToKebab} = require('es-aux')
 
-| 参数 | 类型 | 描述 |
-| --- | --- | --- |
-| keyword | <code>string</code> | <code>Regexp</code> | 关键字 |
-| fulltext | <code>string</code> | 整段文本 |
-| tag | <code>string</code> | 高亮文本标签 |
-| classname | <code>string</code> | 高亮文本标签类名 |
+import * as Aux from 'es-aux'
+// or
+import {camelToKebab} from 'es-aux'
+```
 
-----
-<a id="getHighlight"></a>
-## getHighlight(keyword, fulltext, tag, classname)
-&emsp;&emsp;获取高亮分词具有tag参数，则返回该参数包裹的字符串否则返回数组对象
+<a id="sortJSON"></a>
 
+## sortJSON(array, key, [flag]) ⇒ <code>string</code>
 
-| 参数 | 类型 | 描述 |
-| --- | --- | --- |
-| keyword | <code>string</code> | <code>regexp</code> | 关键字 |
-| fulltext | <code>string</code> | 整段文本 |
-| tag | <code>string</code> | 高亮文本标签 |
-| classname | <code>string</code> | 高亮文本标签类名 |
+&emsp;&emsp;根据对象数组的某字段进项排序
 
-----
-<a id="camelToKebab"></a>
-## camelToKebab(text) ⇒ <code>string</code>
-&emsp;&emsp;驼峰命名转换为短横线命名
+**Returns**: <code>string</code> - - 排序后的数组
 
+| 参数   | 类型                           | 默认值             | 描述                                          |
+| ------ | ------------------------------ | ------------------ | --------------------------------------------- |
+| array  | <code>Array.&lt;any&gt;</code> |                    | 需要排序的数组，其中每一项是对象              |
+| key    | <code>string</code>            |                    | 排序的字段                                    |
+| [flag] | <code>boolean</code>           | <code>false</code> | 是否需要倒序， 默认 false 正序，true 则为倒序 |
 
-| 参数 | 类型 | 描述 |
-| --- | --- | --- |
-| text | <code>string</code> | 需要转换的驼峰命名的字符串 |
-
-----
-<a id="kebabToCamel"></a>
-## kebabToCamel(text) ⇒ <code>string</code>
-&emsp;&emsp;短横线命名转换为驼峰命名
-
-
-| 参数 | 类型 | 描述 |
-| --- | --- | --- |
-| text | <code>string</code> | 需要转换的短横线命名的字符串 |
-
-----
-<a id="randomString"></a>
-## randomString(len) ⇒ <code>string</code>
-&emsp;&emsp;随机生成长度为len的字符串
-
-
-| 参数 | 类型 | 描述 |
-| --- | --- | --- |
-| len | <code>number</code> | 生成字符串的长度 |
-
-----
+---

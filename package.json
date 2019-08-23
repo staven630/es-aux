@@ -7,29 +7,29 @@
   "browser": "dist/es-aux.umd.js",
   "unpkg": "dist/es-aux.umd.js",
   "jsdelivr": "dist/es-aux.umd.js",
-  "types": "lib/main.d.ts",
+  "types": "types/main.d.ts",
   "scripts": {
-    "clean": "rimraf dist lib coverage",
+    "clean": "rimraf dist types lib coverage",
     "build": "tsc && rollup -c",
     "postbuild": "node docs.js",
-    "build:watch": "tsc && rollup -cw",
-    "prepublishOnly": "npm run build",
-    "docs": "documentation build 'src/**' -f html -o docs",
+    "build:watch": "rollup -cw",
     "commit": "git-cz",
     "commit:retry": "git-cz --retry",
     "commit:noverify": "git-cz --no-verify",
-    "precommit": "lint-staged && npm run test && npm run build",
+    "precommit": "npm run clean && lint-staged && npm run test && npm run build",
+    "os": "npm run clean && lint-staged && npm run test && npm run build",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "lint": "eslint src --ext .ts,.tsx",
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
-    "format": "prettier --write \"{src,test}/**/*.{js,ts}\" index.d.ts \"**/*.md\"",
+    "format": "prettier --write \"src/**/*.{js,ts}\"",
     "release": "standard-version",
     "push": "git push --follow-tags origin master"
   },
   "files": [
     "src",
-    "lib",
+    "types",
     "dist"
   ],
   "repository": {
@@ -73,27 +73,30 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-terser": "^5.1.1",
     "rollup-plugin-typescript": "^1.0.1",
-    "rollup-plugin-typescript2": "^0.22.1",
     "standard-version": "^7.0.0",
     "ts-jest": "^24.0.2",
     "typescript": "^3.5.3"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run precommit",
+      "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
     "src/**/*.+(js|ts|tsx|md|css|sass|less|graphql|yml|yaml|scss|json|vue)": [
-      "prettier --write",
-      "eslint --fix",
-      "eslint",
+      "npm run format",
+      "npm run lint:fix",
       "git add"
     ]
   },
   "jest": {
     "verbose": true,
+    "testRegex": "/__tests__/.*\\.spec\\.tsx?$",
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     }

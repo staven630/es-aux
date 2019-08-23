@@ -23,6 +23,7 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
+    "prettier",
     "prettier/@typescript-eslint"
   ],
   "rules": {
@@ -57,6 +58,7 @@ module.exports = {
     /**
      * @description rules of @typescript-eslint
      */
+    '@typescript-eslint/no-explicit-any': 'off',
     "@typescript-eslint/adjacent-overload-signatures": "error",
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/prefer-interface": "off", // also want to use "type"

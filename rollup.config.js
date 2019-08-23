@@ -27,7 +27,7 @@ const terserPlugin = terser({
 
 const plugins = [
   typescript({
-    exclude: 'node_modules/**',
+    exclude: ['node_modules/**', '**/__tests__/**'],
     typescript: require('typescript')
   }),
   json(),

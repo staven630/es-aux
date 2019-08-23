@@ -23,7 +23,6 @@ const templateData = jsdoc2md.getTemplateDataSync({ files: inputFile })
 //   fs.writeFileSync(path.resolve(outputDir, `${className}.md`), output)
 // }
 
-
 const bodyParamsList = `{{#if params}}
 {{#params}}**参数**
 
@@ -92,11 +91,28 @@ ${body}
 let template = `# es-aux
 &emsp;&emsp;JavaScript开发辅助函数库。
 
-# 函数
+
+# 安装
+\`\`\`bash
+npm i -S es - aux
+\`\`\`
+
+# 使用
+\`\`\`js
+const Aux = require('es-aux')
+// or
+const { camelToKebab } = require('es-aux')
+
+import * as Aux from 'es-aux'
+// or
+import { camelToKebab } from 'es-aux'
+\`\`\`
+
 {{#if (showMainIndex)~}}
 {{>module-index~}}
 {{/if~}}
 ${allDocs}
 `
+console.log(templateData)
 const output = jsdoc2md.renderSync({ data: templateData, template })
 fs.writeFileSync(path.resolve(outputDir, `README.md`), output)
