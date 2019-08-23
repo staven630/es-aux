@@ -1,7 +1,4 @@
 /**
- * @module Map操作
- */
-/**
  *  Map转换成Object
  *
  * @param {Map} map - map对象

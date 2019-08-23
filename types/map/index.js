@@ -1,6 +1,3 @@
-/**
- * @module Map操作
- */
 var __values = (this && this.__values) || function (o) {
     var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
     if (m) return m.call(o);

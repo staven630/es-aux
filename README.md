@@ -18,314 +18,6 @@ import * as Aux from 'es-aux'
 import { camelToKebab } from 'es-aux'
 ```
 
-## Modules
-
-<dl>
-<dt><a href="#module_Map操作">Map操作</a></dt>
-<dd></dd>
-</dl>
-
-<a id="module_Map操作"></a>
-## Map操作
-&emsp;&emsp;----
-
-* [Map操作](#module_Map操作)
-    * [~mapToObj(map)](#module_Map操作..mapToObj) ⇒ <code>Object</code>
-    * [~objToMap(obj)](#module_Map操作..objToMap) ⇒ <code>Map</code>
-    * [~hasClass([HTMLElement], [String])](#module_Map操作..hasClass)
-    * [~addClass([HTMLElement], [String])](#module_Map操作..addClass)
-    * [~removeClass([HTMLElement], [String])](#module_Map操作..removeClass)
-    * [~toggleClass([HTMLElement], [String])](#module_Map操作..toggleClass)
-    * [~getUrlParam(name)](#module_Map操作..getUrlParam) ⇒ <code>string</code>
-    * [~getUrlObj()](#module_Map操作..getUrlObj) ⇒ <code>Object</code>
-    * [~addUrlParam(url, name, value)](#module_Map操作..addUrlParam) ⇒ <code>string</code>
-    * [~modifyUrlParam(url, name, value)](#module_Map操作..modifyUrlParam) ⇒ <code>string</code>
-    * [~isIE()](#module_Map操作..isIE) ⇒ <code>Boolean</code>
-    * [~isIE11()](#module_Map操作..isIE11) ⇒ <code>Boolean</code>
-    * [~isEdge()](#module_Map操作..isEdge) ⇒ <code>Boolean</code>
-    * [~getIEVersion()](#module_Map操作..getIEVersion)
-    * [~isAndroid()](#module_Map操作..isAndroid) ⇒ <code>Boolean</code>
-    * [~isIOS()](#module_Map操作..isIOS) ⇒ <code>Boolean</code>
-    * [~isMobile()](#module_Map操作..isMobile) ⇒ <code>Boolean</code>
-    * [~isPC()](#module_Map操作..isPC) ⇒ <code>Boolean</code>
-    * [~isWX()](#module_Map操作..isWX) ⇒ <code>Boolean</code>
-    * [~getEvent(event)](#module_Map操作..getEvent)
-    * [~getEventTarget(event)](#module_Map操作..getEventTarget)
-    * [~addHandler(element, type, handler)](#module_Map操作..addHandler)
-    * [~removeHandler(element, type, handler)](#module_Map操作..removeHandler)
-    * [~preventDefault()](#module_Map操作..preventDefault)
-    * [~stopPropagation()](#module_Map操作..stopPropagation)
-    * [~getPageX(event)](#module_Map操作..getPageX)
-    * [~getPageY(event)](#module_Map操作..getPageY)
-    * [~getScrollTop()](#module_Map操作..getScrollTop) ⇒ <code>Number</code>
-    * [~memoize(fn)](#module_Map操作..memoize)
-
-<a name="module_Map操作..mapToObj"></a>
-
-### Map操作~mapToObj(map) ⇒ <code>Object</code>
-Map转换成Object
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| map | <code>Map</code> | map对象 |
-
-<a name="module_Map操作..objToMap"></a>
-
-### Map操作~objToMap(obj) ⇒ <code>Map</code>
-Object转换成Map
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| obj | <code>Object</code> | map对象 |
-
-<a name="module_Map操作..hasClass"></a>
-
-### Map操作~hasClass([HTMLElement], [String])
-是否具有 className
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-
-| Param | Description |
-| --- | --- |
-| [HTMLElement] | el - 元素 |
-| [String] | cls - 类名 |
-
-<a name="module_Map操作..addClass"></a>
-
-### Map操作~addClass([HTMLElement], [String])
-添加 className
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-
-| Param | Description |
-| --- | --- |
-| [HTMLElement] | el - 元素 |
-| [String] | cls - 类名 |
-
-<a name="module_Map操作..removeClass"></a>
-
-### Map操作~removeClass([HTMLElement], [String])
-删除 className
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-
-| Param | Description |
-| --- | --- |
-| [HTMLElement] | el - 元素 |
-| [String] | cls - 类名 |
-
-<a name="module_Map操作..toggleClass"></a>
-
-### Map操作~toggleClass([HTMLElement], [String])
-切换 className
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-
-| Param | Description |
-| --- | --- |
-| [HTMLElement] | el - 元素 |
-| [String] | cls - 类名 |
-
-<a name="module_Map操作..getUrlParam"></a>
-
-### Map操作~getUrlParam(name) ⇒ <code>string</code>
-获取链接中键相应的值
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| name | <code>string</code> | 键名 |
-
-<a name="module_Map操作..getUrlObj"></a>
-
-### Map操作~getUrlObj() ⇒ <code>Object</code>
-返回链接中所有键值对象
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-<a name="module_Map操作..addUrlParam"></a>
-
-### Map操作~addUrlParam(url, name, value) ⇒ <code>string</code>
-向链接中添加键值对
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| url | <code>string</code> | 链接 |
-| name | <code>string</code> | 键 |
-| value | <code>any</code> | 值 |
-
-<a name="module_Map操作..modifyUrlParam"></a>
-
-### Map操作~modifyUrlParam(url, name, value) ⇒ <code>string</code>
-修改链接中键对应的值
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| url | <code>string</code> | 链接 |
-| name | <code>string</code> | 键 |
-| value | <code>any</code> | 值 |
-
-<a name="module_Map操作..isIE"></a>
-
-### Map操作~isIE() ⇒ <code>Boolean</code>
-判断是否是IE浏览器
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-<a name="module_Map操作..isIE11"></a>
-
-### Map操作~isIE11() ⇒ <code>Boolean</code>
-判断是否是IE11
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-<a name="module_Map操作..isEdge"></a>
-
-### Map操作~isEdge() ⇒ <code>Boolean</code>
-判断是否是Edge
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-<a name="module_Map操作..getIEVersion"></a>
-
-### Map操作~getIEVersion()
-获取IE浏览器版本
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-<a name="module_Map操作..isAndroid"></a>
-
-### Map操作~isAndroid() ⇒ <code>Boolean</code>
-判断是否是Android
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-<a name="module_Map操作..isIOS"></a>
-
-### Map操作~isIOS() ⇒ <code>Boolean</code>
-判断是否是IOS
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-<a name="module_Map操作..isMobile"></a>
-
-### Map操作~isMobile() ⇒ <code>Boolean</code>
-判断是否是移动端
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-<a name="module_Map操作..isPC"></a>
-
-### Map操作~isPC() ⇒ <code>Boolean</code>
-判断是否是PC
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-<a name="module_Map操作..isWX"></a>
-
-### Map操作~isWX() ⇒ <code>Boolean</code>
-判断是否是微信浏览器
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-<a name="module_Map操作..getEvent"></a>
-
-### Map操作~getEvent(event)
-获取事件源
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| event | <code>Event</code> | 事件源 |
-
-<a name="module_Map操作..getEventTarget"></a>
-
-### Map操作~getEventTarget(event)
-获取事件对象
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| event | <code>Event</code> | 事件 |
-
-<a name="module_Map操作..addHandler"></a>
-
-### Map操作~addHandler(element, type, handler)
-添加事件
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| element | <code>Element</code> | 元素 |
-| type | <code>String</code> | 事件类型 |
-| handler | <code>EventListener</code> | 事件 |
-
-<a name="module_Map操作..removeHandler"></a>
-
-### Map操作~removeHandler(element, type, handler)
-移除事件
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| element | <code>Element</code> | 元素 |
-| type | <code>String</code> | 事件类型 |
-| handler | <code>EventListener</code> | 事件 |
-
-<a name="module_Map操作..preventDefault"></a>
-
-### Map操作~preventDefault()
-阻止默认事件
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-<a name="module_Map操作..stopPropagation"></a>
-
-### Map操作~stopPropagation()
-阻止事件冒泡
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-<a name="module_Map操作..getPageX"></a>
-
-### Map操作~getPageX(event)
-获取当前位置的X轴坐标
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| event | <code>Event</code> | 事件源 |
-
-<a name="module_Map操作..getPageY"></a>
-
-### Map操作~getPageY(event)
-获取当前位置的Y轴坐标
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| event | <code>Event</code> | 事件源 |
-
-<a name="module_Map操作..getScrollTop"></a>
-
-### Map操作~getScrollTop() ⇒ <code>Number</code>
-获取页面滚动高度
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-<a name="module_Map操作..memoize"></a>
-
-### Map操作~memoize(fn)
-缓存函数调用结果
-
-**Kind**: inner method of [<code>Map操作</code>](#module_Map操作)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| fn | <code>function</code> | 函数 |
-
 <a id="isArray"></a>
 ## isArray(array)
 &emsp;&emsp;判断是否是数组
@@ -612,5 +304,242 @@ eg: toDecimal(10000000000000, 2) // 10,000,000,000.00
 | --- | --- | --- |
 | key | <code>string</code> | 存储的键 |
 | [domain] | <code>string</code> | 共享Cookie域名 |
+
+----
+<a id="mapToObj"></a>
+## mapToObj(map) ⇒ <code>Object</code>
+&emsp;&emsp;Map转换成Object
+
+
+| 参数 | 类型 | 描述 |
+| --- | --- | --- |
+| map | <code>Map</code> | map对象 |
+
+----
+<a id="objToMap"></a>
+## objToMap(obj) ⇒ <code>Map</code>
+&emsp;&emsp;Object转换成Map
+
+
+| 参数 | 类型 | 描述 |
+| --- | --- | --- |
+| obj | <code>Object</code> | map对象 |
+
+----
+<a id="hasClass"></a>
+## hasClass([HTMLElement], [String])
+&emsp;&emsp;是否具有 className
+
+
+| 参数 | 描述 |
+| --- | --- |
+| [HTMLElement] | el - 元素 |
+| [String] | cls - 类名 |
+
+----
+<a id="addClass"></a>
+## addClass([HTMLElement], [String])
+&emsp;&emsp;添加 className
+
+
+| 参数 | 描述 |
+| --- | --- |
+| [HTMLElement] | el - 元素 |
+| [String] | cls - 类名 |
+
+----
+<a id="removeClass"></a>
+## removeClass([HTMLElement], [String])
+&emsp;&emsp;删除 className
+
+
+| 参数 | 描述 |
+| --- | --- |
+| [HTMLElement] | el - 元素 |
+| [String] | cls - 类名 |
+
+----
+<a id="toggleClass"></a>
+## toggleClass([HTMLElement], [String])
+&emsp;&emsp;切换 className
+
+
+| 参数 | 描述 |
+| --- | --- |
+| [HTMLElement] | el - 元素 |
+| [String] | cls - 类名 |
+
+----
+<a id="getUrlParam"></a>
+## getUrlParam(name) ⇒ <code>string</code>
+&emsp;&emsp;获取链接中键相应的值
+
+
+| 参数 | 类型 | 描述 |
+| --- | --- | --- |
+| name | <code>string</code> | 键名 |
+
+----
+<a id="getUrlObj"></a>
+## getUrlObj() ⇒ <code>Object</code>
+&emsp;&emsp;返回链接中所有键值对象
+
+----
+<a id="addUrlParam"></a>
+## addUrlParam(url, name, value) ⇒ <code>string</code>
+&emsp;&emsp;向链接中添加键值对
+
+
+| 参数 | 类型 | 描述 |
+| --- | --- | --- |
+| url | <code>string</code> | 链接 |
+| name | <code>string</code> | 键 |
+| value | <code>any</code> | 值 |
+
+----
+<a id="modifyUrlParam"></a>
+## modifyUrlParam(url, name, value) ⇒ <code>string</code>
+&emsp;&emsp;修改链接中键对应的值
+
+
+| 参数 | 类型 | 描述 |
+| --- | --- | --- |
+| url | <code>string</code> | 链接 |
+| name | <code>string</code> | 键 |
+| value | <code>any</code> | 值 |
+
+----
+<a id="isIE"></a>
+## isIE() ⇒ <code>Boolean</code>
+&emsp;&emsp;判断是否是IE浏览器
+
+----
+<a id="isIE11"></a>
+## isIE11() ⇒ <code>Boolean</code>
+&emsp;&emsp;判断是否是IE11
+
+----
+<a id="isEdge"></a>
+## isEdge() ⇒ <code>Boolean</code>
+&emsp;&emsp;判断是否是Edge
+
+----
+<a id="getIEVersion"></a>
+## getIEVersion()
+&emsp;&emsp;获取IE浏览器版本
+
+----
+<a id="isAndroid"></a>
+## isAndroid() ⇒ <code>Boolean</code>
+&emsp;&emsp;判断是否是Android
+
+----
+<a id="isIOS"></a>
+## isIOS() ⇒ <code>Boolean</code>
+&emsp;&emsp;判断是否是IOS
+
+----
+<a id="isMobile"></a>
+## isMobile() ⇒ <code>Boolean</code>
+&emsp;&emsp;判断是否是移动端
+
+----
+<a id="isPC"></a>
+## isPC() ⇒ <code>Boolean</code>
+&emsp;&emsp;判断是否是PC
+
+----
+<a id="isWX"></a>
+## isWX() ⇒ <code>Boolean</code>
+&emsp;&emsp;判断是否是微信浏览器
+
+----
+<a id="getEvent"></a>
+## getEvent(event)
+&emsp;&emsp;获取事件源
+
+
+| 参数 | 类型 | 描述 |
+| --- | --- | --- |
+| event | <code>Event</code> | 事件源 |
+
+----
+<a id="getEventTarget"></a>
+## getEventTarget(event)
+&emsp;&emsp;获取事件对象
+
+
+| 参数 | 类型 | 描述 |
+| --- | --- | --- |
+| event | <code>Event</code> | 事件 |
+
+----
+<a id="addHandler"></a>
+## addHandler(element, type, handler)
+&emsp;&emsp;添加事件
+
+
+| 参数 | 类型 | 描述 |
+| --- | --- | --- |
+| element | <code>Element</code> | 元素 |
+| type | <code>String</code> | 事件类型 |
+| handler | <code>EventListener</code> | 事件 |
+
+----
+<a id="removeHandler"></a>
+## removeHandler(element, type, handler)
+&emsp;&emsp;移除事件
+
+
+| 参数 | 类型 | 描述 |
+| --- | --- | --- |
+| element | <code>Element</code> | 元素 |
+| type | <code>String</code> | 事件类型 |
+| handler | <code>EventListener</code> | 事件 |
+
+----
+<a id="preventDefault"></a>
+## preventDefault()
+&emsp;&emsp;阻止默认事件
+
+----
+<a id="stopPropagation"></a>
+## stopPropagation()
+&emsp;&emsp;阻止事件冒泡
+
+----
+<a id="getPageX"></a>
+## getPageX(event)
+&emsp;&emsp;获取当前位置的X轴坐标
+
+
+| 参数 | 类型 | 描述 |
+| --- | --- | --- |
+| event | <code>Event</code> | 事件源 |
+
+----
+<a id="getPageY"></a>
+## getPageY(event)
+&emsp;&emsp;获取当前位置的Y轴坐标
+
+
+| 参数 | 类型 | 描述 |
+| --- | --- | --- |
+| event | <code>Event</code> | 事件源 |
+
+----
+<a id="getScrollTop"></a>
+## getScrollTop() ⇒ <code>Number</code>
+&emsp;&emsp;获取页面滚动高度
+
+----
+<a id="memoize"></a>
+## memoize(fn)
+&emsp;&emsp;缓存函数调用结果
+
+
+| 参数 | 类型 | 描述 |
+| --- | --- | --- |
+| fn | <code>function</code> | 函数 |
 
 ----
