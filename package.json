@@ -1,7 +1,7 @@
 {
   "name": "es-aux",
-  "version": "0.0.2",
-  "description": "",
+  "version": "0.0.3",
+  "description": "JavaScript Functions and Helpers",
   "main": "dist/es-aux.cjs.js",
   "module": "dist/es-aux.esm.js",
   "browser": "dist/es-aux.umd.js",
@@ -35,7 +35,11 @@
     "type": "git",
     "url": "git+https://github.com/staven630/es-aux.git"
   },
-  "keywords": [],
+  "keywords": [
+    "javascript",
+    "javascript helpers",
+    "js helper functions"
+  ],
   "author": "staven <20287710@qq.com> (http://github.com/staven630)",
   "license": "MIT",
   "bugs": {

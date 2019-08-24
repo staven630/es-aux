@@ -38,7 +38,7 @@ import { camelToKebab } from 'es-aux'
 
 # 助手函数列表
 `
-const docsPath = 'https://github.com/staven630/es-aux/docs'
+const docsPath = 'https://github.com/staven630/es-aux/blob/master/docs'
 
 function renderFnList(item, template, filepath) {
   return `${template}
