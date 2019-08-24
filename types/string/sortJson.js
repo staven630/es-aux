@@ -1,4 +1,4 @@
-/*eslint @typescript-eslint/no-explicit-any: ["error", { "ignoreRestArgs": false }]*/
+/** @module 字符串相关-string */
 [].sort();
 /**
  * 根据对象数组的某字段进项排序

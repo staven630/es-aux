@@ -1,4 +1,4 @@
-/*eslint @typescript-eslint/no-explicit-any: ["error", { "ignoreRestArgs": false }]*/
+/** @module 字符串相关-string */
 
 type Primer = (s: string, radix?: number | undefined) => number
 ;[].sort()

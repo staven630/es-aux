@@ -18,6 +18,7 @@ var __spread = (this && this.__spread) || function () {
     for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
     return ar;
 };
+/** @module 数组-array */
 import { isArray } from '../is';
 /**
  * 基本类型数组去重

@@ -1,4 +1,4 @@
-/*eslint @typescript-eslint/no-explicit-any: "off" */
+/** @module 数组-array */
 
 /**
  * 求数组并集

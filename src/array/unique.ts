@@ -1,3 +1,4 @@
+/** @module 数组-array */
 import {isArray} from '../is'
 
 /**
@@ -5,7 +6,7 @@ import {isArray} from '../is'
  *
  * @param {Array} arr - 需要去重的数组
  */
-export function uniqueArr(arr: any[]) {
+export function uniqueArr<T>(arr: T[]) {
   return [...new Set(arr)]
 }
 

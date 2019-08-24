@@ -1,4 +1,4 @@
-/*eslint @typescript-eslint/no-explicit-any: "off" */
+/** @module 数组-array */
 var __read = (this && this.__read) || function (o, n) {
     var m = typeof Symbol === "function" && o[Symbol.iterator];
     if (!m) return o;

@@ -1,3 +1,4 @@
+/** @module 数组-array */
 import {isArray} from '../is'
 
 /**

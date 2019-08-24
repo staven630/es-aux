@@ -1,3 +1,4 @@
+/** @module 浏览器相关-browser */
 import {isArray} from '../is'
 
 /**

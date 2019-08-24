@@ -1,3 +1,4 @@
+/** @module 数组-array */
 import { isArray } from '../is';
 /**
  * 规整多重数组

@@ -1,3 +1,4 @@
+/** @module 字符串相关-string */
 import {RegExpExecArrayOrNull} from '../types'
 
 type HighlightList = {

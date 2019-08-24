@@ -1,3 +1,4 @@
+/** @module 浏览器相关-browser */
 import { isArray } from '../is';
 /**
  * 判断是否是IE浏览器

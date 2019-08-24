@@ -1,3 +1,4 @@
+/** @module 存储相关-storage */
 /**
  * 设置Cookie
  *

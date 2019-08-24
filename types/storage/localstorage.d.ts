@@ -1,3 +1,4 @@
+/** @module 存储相关-storage */
 /**
  * localStorage获取值
  *

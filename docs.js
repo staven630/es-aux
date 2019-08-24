@@ -3,94 +3,22 @@ const jsdoc2md = require('jsdoc-to-markdown')
 const fs = require('fs')
 const path = require('path')
 
-
-/* input and output paths */
 const inputFile = './dist/es-aux.js'
-const outputDir = `${__dirname}`
-/* get template data */
 const templateData = jsdoc2md.getTemplateDataSync({ files: inputFile })
-/* reduce templateData to an array of class names */
-// const classNames = templateData.reduce((classNames, identifier) => {
-//   if (identifier.kind === 'class') classNames.push(identifier.name)
-//   return classNames
-// }, [])
 
-// /* create a documentation file for each class */
-// for (const className of classNames) {
-//   const template = `{{#class name="${className}"}}{{>docs}}{{/class}}`
-// console.log(`rendering ${className}, template: ${template}`)
-//   const output = jsdoc2md.renderSync({ data: templateData, template: template })
-//   fs.writeFileSync(path.resolve(outputDir, `${className}.md`), output)
-// }
+let templateList = {}
+templateData.forEach(item => {
+  if (item.memberof) {
+    const memberof = item.memberof.substring(7)
+    templateList[memberof] = templateList[memberof] ? [
+      ...templateList[memberof],
+      item
+    ] : [item]
+  }
+})
 
-const bodyParamsList = `{{#if params}}
-{{#params}}**参数**
-
-{{#each this~}}
-{{indent}}- {{name}}{{#if type}} {{>linked-type-list types=type.names delimiter=" | " }}{{/if}}{{#unless (equal defaultvalue undefined)}} {{>defaultvalue equals=true ~}}{{/unless}}{{#if description}} - {{{inlineLinks description}}}{{/if}}
-{{/each}}
-{{/params~}}
-{{/if}}`
-
-const bodyParamsTable = `{{#if params}}
-{{tableHead params "name|参数" "type|类型" "defaultvalue|默认值" "description|描述" ~}}
-
-{{#tableRow params "name" "type" "defaultvalue" "description" ~}}
-| {{#if @col1}}{{>param-table-name}} | {{/if~}}
-{{#if @col2}}{{>linked-type-list types=type.names delimiter=" \| " }} | {{/if~}}
-{{#if @col3}}{{>defaultvalue}} | {{/if~}}
-{{#if @col4}}{{{stripNewlines (inlineLinks description)}}} |{{/if}}
-{{/tableRow}}
-
-{{/if}}`
-
-const body = `{{>deprecated~}}
-&emsp;&emsp;{{>description~}}
-{{>summary~}}
-{{>augments~}}
-{{>implements~}}
-{{>mixes~}}
-{{>default~}}
-{{>chainable~}}
-{{>overrides~}}
-{{>returns~}}
-{{>category~}}
-{{>throws~}}
-{{>fires~}}
-{{>this~}}
-{{>access~}}
-{{>readOnly~}}
-{{>requires~}}
-{{>customTags~}}
-{{>see~}}
-{{>since~}}
-{{>version~}}
-{{>authors~}}
-{{>license~}}
-{{>copyright~}}
-{{>todo~}}
-{{#if (optionEquals "param-list-format" "list")}}${bodyParamsList}{{/if~}}
-{{#if (optionEquals "param-list-format" "table")~}}
-{{#if (optionEquals "no-gfm" true)}}{{>params-table-html~}}{{else}}${bodyParamsTable}{{/if~}}
-{{/if~}}
-{{>properties~}}
-{{>examples~}}
-----`
-
-const allDocs = `
-{{#orphans ~}}
-<a id="{{{anchorName}}}"></a>
-{{>heading-indent}}{{>sig-name}}
-${body}
-{{>member-index~}}
-{{>separator~}}
-{{>members~}}
-{{/orphans~}}`
-
-
-let template = `# es-aux
+let readme = `# es-aux
 &emsp;&emsp;JavaScript开发辅助函数库。
-
 
 # 安装
 \`\`\`bash
@@ -108,10 +36,103 @@ import * as Aux from 'es-aux'
 import { camelToKebab } from 'es-aux'
 \`\`\`
 
-{{#if (showMainIndex)~}}
-{{>module-index~}}
-{{/if~}}
-${allDocs}
+# 助手函数列表
 `
-const output = jsdoc2md.renderSync({ data: templateData, template })
-fs.writeFileSync(path.resolve(outputDir, `README.md`), output)
+const docsPath = 'https://github.com/staven630/es-aux/docs'
+
+function renderFnList(item, template, filepath) {
+  return `${template}
+* [${item.name}: ${item.description}](${docsPath}/${filepath}.md#${item.name})`
+}
+
+function renderDoc(item) {
+
+  let paramList = ``
+  let paramStr = ``
+  let examples = ``
+  if (item.examples) {
+    item.examples.forEach(o => {
+      examples = `${examples}
+${o}`
+    })
+  }
+  if (examples) {
+    examples = `
+##### 示例：
+${examples}`
+  }
+  let returnType = ''
+  if (item.returns) {
+    const returnVal = item.returns[0]
+    returnType = returnVal.type ? returnVal.type.names[0] : ''
+  }
+
+  item.params.forEach((param, index) => {
+    if (param.name) {
+      let paramName = param.optional ? `[${param.name}]` : param.name;
+      let paramType = 'Any';
+      if (param.type && param.type.names) {
+        paramType = param.type.names[0]
+      }
+      paramType.replace('*', 'Any')
+      let paramDv = param.defaultvalue || ''
+      let paramDes = param.description || ''
+      paramList = `${paramList}
+| ${paramName} | ${paramType} | ${paramDv} | ${paramDes} |`
+      if (paramType) {
+        const type = paramType.replace(/\//gi, '|').replace(/\./gi, '')
+        paramStr = index === item.params.length - 1 ? `${param.name}: ${type}` : `${param.name}: ${type}, `
+      } else {
+        paramStr = index === item.params.length - 1 ? `${param.name}` : `${param.name}, `
+      }
+    }
+  })
+
+  paramStr = returnType ? `(${paramStr}) => ${returnType.replace(/\./gi, '')}` : `(${paramStr})`
+
+  paramList = paramList ? `
+##### 形参列表：
+| 参数 | 类型  |  默认值         | 描述 |
+| :--- | :---- | :------------- |:---- |${paramList}` : ''
+
+  returnType = returnType ? `
+##### 返回值：${returnType.replace(/\//gi, '|')}` : ''
+
+  return `### <span id="${item.name}">✅ ${item.name}${paramStr}</span>
+&emsp;&emsp;${item.description}
+${paramList}
+${returnType}
+${examples}
+[▲ 回顶部](#top)`
+}
+
+try {
+  fs.mkdirSync(path.resolve(__dirname, 'docs'))
+} catch (error) {
+
+}
+
+for (const type in templateList) {
+  const [name, filepath] = type.split('-')
+  let readmeStr = `### ${name}`;
+  let doc = `# ${name}
+
+<span id="top">目录</span>`
+  let docList = ``
+  for (let i = 0; i < templateList[type].length; i++) {
+    const item = templateList[type][i]
+    readmeStr = renderFnList(item, readmeStr, filepath)
+    doc = `${doc}
+* [ ${item.name}: ${item.description}](#${item.name})`
+    docList = `${docList}
+${renderDoc(item)}`
+  }
+  readme = `${readme}
+${readmeStr}`
+  doc = `${doc}
+
+${docList}`
+  fs.writeFileSync(path.resolve(__dirname, `docs/${filepath}.md`), doc)
+}
+
+fs.writeFileSync(path.resolve(__dirname, `README.md`), readme)
