@@ -44,13 +44,11 @@ export function getHighlightTemplate(keyword, fulltext, tag, classname) {
     return str;
 }
 /**
- * 获取高亮分词
- * 具有tag参数，则返回该参数包裹的字符串
- * 否则返回数组对象
+ * 获取高亮分词信息
  *
  * @param {(string/Regexp)} keyword - 关键字
  * @param {string} fulltext - 整段文本
- * @param {string} [tag] - 高亮文本标签
+ * @param {string} [tag] - 高亮文本标签,具有tag参数，则返回该标签包裹的字符串,否则返回数组对象
  * @param {string} [classname] - 高亮文本标签类名
  * @returns {string | Object[]}
  */

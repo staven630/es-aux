@@ -32,7 +32,7 @@ import { camelToKebab } from 'es-aux'
 * [randomString: 随机生成长度为len的字符串](https://github.com/staven630/es-aux/blob/master/docs/string.md#randomString)
 * [getHighlightList: 获取高亮分词列表](https://github.com/staven630/es-aux/blob/master/docs/string.md#getHighlightList)
 * [getHighlightTemplate: 获取高亮分词模板](https://github.com/staven630/es-aux/blob/master/docs/string.md#getHighlightTemplate)
-* [getHighlight: 获取高亮分词具有tag参数，则返回该参数包裹的字符串否则返回数组对象](https://github.com/staven630/es-aux/blob/master/docs/string.md#getHighlight)
+* [getHighlight: 获取高亮分词信息](https://github.com/staven630/es-aux/blob/master/docs/string.md#getHighlight)
 ### 数组
 * [unionArr: 求数组并集](https://github.com/staven630/es-aux/blob/master/docs/array.md#unionArr)
 * [intersectArr: 求数组交集](https://github.com/staven630/es-aux/blob/master/docs/array.md#intersectArr)
