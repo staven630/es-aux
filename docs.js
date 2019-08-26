@@ -79,7 +79,7 @@ ${examples}`
       paramList = `${paramList}
 | ${paramName} | ${paramType} | ${paramDv} | ${paramDes} |`
       if (paramType) {
-        const type = paramType.replace(/\//gi, '|').replace(/\./gi, '')
+        const type = paramType.replace(/\//gi, '|').replace(/\./gi, '').replace(/(\<|\>)/gi, '\\$1')
         paramStr = index === item.params.length - 1 ? `${param.name}: ${type}` : `${param.name}: ${type}, `
       } else {
         paramStr = index === item.params.length - 1 ? `${param.name}` : `${param.name}, `
@@ -104,7 +104,6 @@ ${paramList}
 ${returnType}
 
 ${examples}
-
 [▲ 回顶部](#top)`
 }
 
