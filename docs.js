@@ -91,8 +91,7 @@ ${examples}`
 
   paramList = paramList ? `##### 形参列表：
 | 参数 | 类型  |  默认值         | 描述 |
-| :--- | :---- | :------------- |:---- |
-${paramList}` : ''
+| :--- | :---- | :------------- |:---- |${paramList}` : ''
 
   returnType = returnType ? `
 ##### 返回值：${returnType.replace(/\//gi, '|')}` : ''
