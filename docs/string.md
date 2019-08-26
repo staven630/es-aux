@@ -30,8 +30,11 @@
 
 ##### 示例：
 
-divideText(10000000000000, 3, ',') => 10,000,000,000,000
+```jsdivideText(10000000000000, 3, ',') => 10,000,000,000,000```
+
 [▲ 回顶部](#top)
+---
+
 ### <span id="spliceText">♥ spliceText(replaceText: string) => string</span>
 
 &emsp;&emsp;隐藏/替换字符串中间几位
@@ -49,8 +52,11 @@ divideText(10000000000000, 3, ',') => 10,000,000,000,000
 
 ##### 示例：
 
-spliceText(18255558888, 3, 4, '****') // 182\*\*\*\*8888
+```jsspliceText(18255558888, 3, 4, '****') // 182\*\*\*\*8888```
+
 [▲ 回顶部](#top)
+---
+
 ### <span id="toDecimal">♥ toDecimal(len: number) => string</span>
 
 &emsp;&emsp;金额每三位正数添加逗号，支持保留小数
@@ -67,7 +73,10 @@ spliceText(18255558888, 3, 4, '****') // 182\*\*\*\*8888
 ##### 示例：
 
 ```jstoDecimal(10000000000000, 2) // 10,000,000,000.00```
+
 [▲ 回顶部](#top)
+---
+
 ### <span id="sortJSON">♥ sortJSON(flag: boolean) => string</span>
 
 &emsp;&emsp;根据对象数组的某字段进项排序
@@ -83,7 +92,10 @@ spliceText(18255558888, 3, 4, '****') // 182\*\*\*\*8888
 ##### 返回值：string
 
 
+
 [▲ 回顶部](#top)
+---
+
 ### <span id="camelToKebab">♥ camelToKebab(text: string) => string</span>
 
 &emsp;&emsp;驼峰命名转换为短横线命名
@@ -97,7 +109,10 @@ spliceText(18255558888, 3, 4, '****') // 182\*\*\*\*8888
 ##### 返回值：string
 
 
+
 [▲ 回顶部](#top)
+---
+
 ### <span id="kebabToCamel">♥ kebabToCamel(text: string) => string</span>
 
 &emsp;&emsp;短横线命名转换为驼峰命名
@@ -111,7 +126,10 @@ spliceText(18255558888, 3, 4, '****') // 182\*\*\*\*8888
 ##### 返回值：string
 
 
+
 [▲ 回顶部](#top)
+---
+
 ### <span id="formatHTML">♥ formatHTML(str: string) => string</span>
 
 &emsp;&emsp;过滤文本中的html标签
@@ -125,7 +143,10 @@ spliceText(18255558888, 3, 4, '****') // 182\*\*\*\*8888
 ##### 返回值：string
 
 
+
 [▲ 回顶部](#top)
+---
+
 ### <span id="randomString">♥ randomString(len: number) => string</span>
 
 &emsp;&emsp;随机生成长度为len的字符串
@@ -139,7 +160,10 @@ spliceText(18255558888, 3, 4, '****') // 182\*\*\*\*8888
 ##### 返回值：string
 
 
+
 [▲ 回顶部](#top)
+---
+
 ### <span id="getHighlightList">♥ getHighlightList(fulltext: string) => Array\<object\></span>
 
 &emsp;&emsp;获取高亮分词列表
@@ -154,7 +178,10 @@ spliceText(18255558888, 3, 4, '****') // 182\*\*\*\*8888
 ##### 返回值：Array\<object\>
 
 
+
 [▲ 回顶部](#top)
+---
+
 ### <span id="getHighlightTemplate">♥ getHighlightTemplate(classname: string) => string</span>
 
 &emsp;&emsp;获取高亮分词模板
@@ -171,7 +198,10 @@ spliceText(18255558888, 3, 4, '****') // 182\*\*\*\*8888
 ##### 返回值：string
 
 
+
 [▲ 回顶部](#top)
+---
+
 ### <span id="getHighlight">♥ getHighlight(classname: string) => string</span>
 
 &emsp;&emsp;获取高亮分词信息
@@ -188,4 +218,6 @@ spliceText(18255558888, 3, 4, '****') // 182\*\*\*\*8888
 ##### 返回值：string
 
 
+
 [▲ 回顶部](#top)
+---

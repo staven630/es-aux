@@ -23,7 +23,10 @@
 
 
 
+
 [▲ 回顶部](#top)
+---
+
 ### <span id="setStorage">♥ setStorage(day: number)</span>
 
 &emsp;&emsp;localStorage设置值
@@ -38,7 +41,10 @@
 
 
 
+
 [▲ 回顶部](#top)
+---
+
 ### <span id="removeStorage">♥ removeStorage(key: string)</span>
 
 &emsp;&emsp;localStorage移除键为key的存储
@@ -51,7 +57,10 @@
 
 
 
+
 [▲ 回顶部](#top)
+---
+
 ### <span id="clearStorage">♥ clearStorage()</span>
 
 &emsp;&emsp;localStorage清空存储
@@ -61,7 +70,10 @@
 
 
 
+
 [▲ 回顶部](#top)
+---
+
 ### <span id="setCookie">♥ setCookie(domain: string)</span>
 
 &emsp;&emsp;设置Cookie
@@ -77,7 +89,10 @@
 
 
 
+
 [▲ 回顶部](#top)
+---
+
 ### <span id="getCookie">♥ getCookie(key: Any)</span>
 
 &emsp;&emsp;获取Cookie
@@ -90,7 +105,10 @@
 
 
 
+
 [▲ 回顶部](#top)
+---
+
 ### <span id="removeCookie">♥ removeCookie(domain: string)</span>
 
 &emsp;&emsp;清除Cookie
@@ -104,4 +122,6 @@
 
 
 
+
 [▲ 回顶部](#top)
+---

@@ -112,6 +112,7 @@ ${returnType}
 ${examples}
 
 [▲ 回顶部](#top)
+---
 `
 }
 

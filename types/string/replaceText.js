@@ -1,7 +1,10 @@
 /** @module 字符串相关-string */
 /**
  * 以某字符分隔字符串
- * @example divideText(10000000000000, 3, ',') => 10,000,000,000,000
+ * @example
+ * ```js
+ * divideText(10000000000000, 3, ',') => 10,000,000,000,000
+ * ```
  *
  * @param {string/number} text - 需要被分割的文本
  * @param {number} len - 分割长度
@@ -16,7 +19,10 @@ export function divideText(text, len, replaceText) {
 }
 /**
  * 隐藏/替换字符串中间几位
- * @example spliceText(18255558888, 3, 4, '****') // 182\*\*\*\*8888
+ * @example
+ * ```js
+ * spliceText(18255558888, 3, 4, '****') // 182\*\*\*\*8888
+ * ```
  *
  * @param {string/number} text - 需要被替换的文本
  * @param {number} start - start从前往后第几位
