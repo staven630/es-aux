@@ -5,7 +5,7 @@
 
 
 ### <span id="memoize">♥ memoize(fn: function)</span>
-  
+
 &emsp;&emsp;缓存函数调用结果
 
 ##### 形参列表：

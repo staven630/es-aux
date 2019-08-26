@@ -15,7 +15,7 @@
 
 
 ### <span id="divideText">♥ divideText(replaceText: string) => string</span>
-  
+
 &emsp;&emsp;以某字符分隔字符串
 
 ##### 形参列表：
@@ -33,7 +33,7 @@
 divideText(10000000000000, 3, ',') => 10,000,000,000,000
 [▲ 回顶部](#top)
 ### <span id="spliceText">♥ spliceText(replaceText: string) => string</span>
-  
+
 &emsp;&emsp;隐藏/替换字符串中间几位
 
 ##### 形参列表：
@@ -52,7 +52,7 @@ divideText(10000000000000, 3, ',') => 10,000,000,000,000
 spliceText(18255558888, 3, 4, '****') // 182\*\*\*\*8888
 [▲ 回顶部](#top)
 ### <span id="toDecimal">♥ toDecimal(len: number) => string</span>
-  
+
 &emsp;&emsp;金额每三位正数添加逗号，支持保留小数
 
 ##### 形参列表：
@@ -69,7 +69,7 @@ spliceText(18255558888, 3, 4, '****') // 182\*\*\*\*8888
 ```jstoDecimal(10000000000000, 2) // 10,000,000,000.00```
 [▲ 回顶部](#top)
 ### <span id="sortJSON">♥ sortJSON(flag: boolean) => string</span>
-  
+
 &emsp;&emsp;根据对象数组的某字段进项排序
 
 ##### 形参列表：
@@ -85,7 +85,7 @@ spliceText(18255558888, 3, 4, '****') // 182\*\*\*\*8888
 
 [▲ 回顶部](#top)
 ### <span id="camelToKebab">♥ camelToKebab(text: string) => string</span>
-  
+
 &emsp;&emsp;驼峰命名转换为短横线命名
 
 ##### 形参列表：
@@ -99,7 +99,7 @@ spliceText(18255558888, 3, 4, '****') // 182\*\*\*\*8888
 
 [▲ 回顶部](#top)
 ### <span id="kebabToCamel">♥ kebabToCamel(text: string) => string</span>
-  
+
 &emsp;&emsp;短横线命名转换为驼峰命名
 
 ##### 形参列表：
@@ -113,7 +113,7 @@ spliceText(18255558888, 3, 4, '****') // 182\*\*\*\*8888
 
 [▲ 回顶部](#top)
 ### <span id="formatHTML">♥ formatHTML(str: string) => string</span>
-  
+
 &emsp;&emsp;过滤文本中的html标签
 
 ##### 形参列表：
@@ -127,7 +127,7 @@ spliceText(18255558888, 3, 4, '****') // 182\*\*\*\*8888
 
 [▲ 回顶部](#top)
 ### <span id="randomString">♥ randomString(len: number) => string</span>
-  
+
 &emsp;&emsp;随机生成长度为len的字符串
 
 ##### 形参列表：
@@ -140,8 +140,8 @@ spliceText(18255558888, 3, 4, '****') // 182\*\*\*\*8888
 
 
 [▲ 回顶部](#top)
-### <span id="getHighlightList">♥ getHighlightList(fulltext: string) => Array<object></span>
-  
+### <span id="getHighlightList">♥ getHighlightList(fulltext: string) => Array\<object\></span>
+
 &emsp;&emsp;获取高亮分词列表
 
 ##### 形参列表：
@@ -151,12 +151,12 @@ spliceText(18255558888, 3, 4, '****') // 182\*\*\*\*8888
 | fulltext | string |  | 整段文本 |
 
 
-##### 返回值：Array.<object>
+##### 返回值：Array\<object\>
 
 
 [▲ 回顶部](#top)
 ### <span id="getHighlightTemplate">♥ getHighlightTemplate(classname: string) => string</span>
-  
+
 &emsp;&emsp;获取高亮分词模板
 
 ##### 形参列表：
@@ -173,7 +173,7 @@ spliceText(18255558888, 3, 4, '****') // 182\*\*\*\*8888
 
 [▲ 回顶部](#top)
 ### <span id="getHighlight">♥ getHighlight(classname: string) => string</span>
-  
+
 &emsp;&emsp;获取高亮分词信息
 
 ##### 形参列表：

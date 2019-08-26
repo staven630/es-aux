@@ -30,7 +30,7 @@
 
 
 ### <span id="hasClass">♥ hasClass(cls: string)</span>
-  
+
 &emsp;&emsp;是否具有 className
 
 ##### 形参列表：
@@ -44,7 +44,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="addClass">♥ addClass(cls: string)</span>
-  
+
 &emsp;&emsp;添加 className
 
 ##### 形参列表：
@@ -58,7 +58,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="removeClass">♥ removeClass(cls: string)</span>
-  
+
 &emsp;&emsp;删除 className
 
 ##### 形参列表：
@@ -72,7 +72,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="toggleClass">♥ toggleClass(cls: string)</span>
-  
+
 &emsp;&emsp;切换 className
 
 ##### 形参列表：
@@ -86,7 +86,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="getUrlParam">♥ getUrlParam(name: string) => string</span>
-  
+
 &emsp;&emsp;获取链接中键相应的值
 
 ##### 形参列表：
@@ -100,7 +100,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="getUrlObj">♥ getUrlObj() => Object</span>
-  
+
 &emsp;&emsp;返回链接中所有键值对象
 
 
@@ -111,7 +111,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="addUrlParam">♥ addUrlParam(value: any) => string</span>
-  
+
 &emsp;&emsp;向链接中添加键值对
 
 ##### 形参列表：
@@ -127,7 +127,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="modifyUrlParam">♥ modifyUrlParam(value: any) => string</span>
-  
+
 &emsp;&emsp;修改链接中键对应的值
 
 ##### 形参列表：
@@ -143,7 +143,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="isIE">♥ isIE() => Boolean</span>
-  
+
 &emsp;&emsp;判断是否是IE浏览器
 
 
@@ -154,7 +154,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="isIE11">♥ isIE11() => Boolean</span>
-  
+
 &emsp;&emsp;判断是否是IE11
 
 
@@ -165,7 +165,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="isEdge">♥ isEdge() => Boolean</span>
-  
+
 &emsp;&emsp;判断是否是Edge
 
 
@@ -176,7 +176,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="getIEVersion">♥ getIEVersion()</span>
-  
+
 &emsp;&emsp;获取IE浏览器版本
 
 
@@ -186,7 +186,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="isAndroid">♥ isAndroid() => Boolean</span>
-  
+
 &emsp;&emsp;判断是否是Android
 
 
@@ -197,7 +197,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="isIOS">♥ isIOS() => Boolean</span>
-  
+
 &emsp;&emsp;判断是否是IOS
 
 
@@ -208,7 +208,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="isMobile">♥ isMobile() => Boolean</span>
-  
+
 &emsp;&emsp;判断是否是移动端
 
 
@@ -219,7 +219,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="isPC">♥ isPC() => Boolean</span>
-  
+
 &emsp;&emsp;判断是否是PC
 
 
@@ -230,7 +230,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="isWX">♥ isWX() => Boolean</span>
-  
+
 &emsp;&emsp;判断是否是微信浏览器
 
 
@@ -241,7 +241,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="getEvent">♥ getEvent(event: Event)</span>
-  
+
 &emsp;&emsp;获取事件源
 
 ##### 形参列表：
@@ -254,7 +254,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="getEventTarget">♥ getEventTarget(event: Event)</span>
-  
+
 &emsp;&emsp;获取事件对象
 
 ##### 形参列表：
@@ -267,7 +267,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="addHandler">♥ addHandler(handler: EventListener)</span>
-  
+
 &emsp;&emsp;添加事件
 
 ##### 形参列表：
@@ -282,7 +282,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="removeHandler">♥ removeHandler(handler: EventListener)</span>
-  
+
 &emsp;&emsp;移除事件
 
 ##### 形参列表：
@@ -297,7 +297,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="preventDefault">♥ preventDefault()</span>
-  
+
 &emsp;&emsp;阻止默认事件
 
 
@@ -307,7 +307,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="stopPropagation">♥ stopPropagation()</span>
-  
+
 &emsp;&emsp;阻止事件冒泡
 
 
@@ -317,7 +317,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="getPageX">♥ getPageX(event: Event)</span>
-  
+
 &emsp;&emsp;获取当前位置的X轴坐标
 
 ##### 形参列表：
@@ -330,7 +330,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="getPageY">♥ getPageY(event: Event)</span>
-  
+
 &emsp;&emsp;获取当前位置的Y轴坐标
 
 ##### 形参列表：
@@ -343,7 +343,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="getScrollTop">♥ getScrollTop() => Number</span>
-  
+
 &emsp;&emsp;获取页面滚动高度
 
 

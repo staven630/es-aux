@@ -6,7 +6,7 @@
 
 
 ### <span id="mapToObj">♥ mapToObj(map: Map) => Object</span>
-  
+
 &emsp;&emsp;Map转换成Object
 
 ##### 形参列表：
@@ -20,7 +20,7 @@
 
 [▲ 回顶部](#top)
 ### <span id="objToMap">♥ objToMap(obj: Object) => Map</span>
-  
+
 &emsp;&emsp;Object转换成Map
 
 ##### 形参列表：

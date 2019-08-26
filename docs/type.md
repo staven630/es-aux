@@ -5,7 +5,7 @@
 
 
 ### <span id="isArray">♥ isArray(array: *)</span>
-  
+
 &emsp;&emsp;判断是否是数组
 
 ##### 形参列表：

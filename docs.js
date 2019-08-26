@@ -6,6 +6,11 @@ const path = require('path')
 const inputFile = './dist/es-aux.js'
 const templateData = jsdoc2md.getTemplateDataSync({ files: inputFile })
 
+
+function formatStr(str) {
+  return str.replace(/\./gi, '').replace(/(\<|\>)/gi, '\\$1')
+}
+
 let templateList = {}
 templateData.forEach(item => {
   if (item.memberof) {
@@ -63,7 +68,7 @@ ${examples}`
   let returnType = ''
   if (item.returns) {
     const returnVal = item.returns[0]
-    returnType = returnVal.type ? returnVal.type.names[0] : ''
+    returnType = returnVal.type ? formatStr(returnVal.type.names[0]) : ''
   }
 
   item.params.forEach((param, index) => {
@@ -79,7 +84,7 @@ ${examples}`
       paramList = `${paramList}
 | ${paramName} | ${paramType} | ${paramDv} | ${paramDes} |`
       if (paramType) {
-        const type = paramType.replace(/\//gi, '|').replace(/\./gi, '').replace(/(\<|\>)/gi, '\\$1')
+        const type = formatStr(paramType.replace(/\//gi, '|'))
         paramStr = index === item.params.length - 1 ? `${param.name}: ${type}` : `${param.name}: ${type}, `
       } else {
         paramStr = index === item.params.length - 1 ? `${param.name}` : `${param.name}, `
@@ -87,7 +92,7 @@ ${examples}`
     }
   })
 
-  paramStr = returnType ? `(${paramStr}) => ${returnType.replace(/\./gi, '')}` : `(${paramStr})`
+  paramStr = returnType ? `(${paramStr}) => ${returnType}` : `(${paramStr})`
 
   paramList = paramList ? `##### 形参列表：
 | 参数 | 类型  |  默认值         | 描述 |
@@ -97,7 +102,7 @@ ${examples}`
 ##### 返回值：${returnType.replace(/\//gi, '|')}` : ''
 
   return `### <span id="${item.name}">♥ ${item.name}${paramStr}</span>
-  
+
 &emsp;&emsp;${item.description}
 
 ${paramList}
@@ -105,7 +110,9 @@ ${paramList}
 ${returnType}
 
 ${examples}
-[▲ 回顶部](#top)`
+
+[▲ 回顶部](#top)
+`
 }
 
 try {
