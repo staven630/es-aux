@@ -5,7 +5,7 @@
  *
  * @param {string/number} text - 需要被分割的文本
  * @param {number} len - 分割长度
- * @param {string} [replaceText=,] - 用来替换的字符
+ * @param {string} [replaceText=','] - 用来替换的字符
  * @returns {string}
  */
 export declare function divideText(text: string | number, len: number, replaceText?: string): string;
@@ -21,8 +21,11 @@ export declare function divideText(text: string | number, len: number, replaceTe
  */
 export declare function spliceText(text: string | number, start: number, last: number, replaceText: string): string;
 /**
- * 金额每三位正数添加逗号(支持保留小数)
- * eg: toDecimal(10000000000000, 2) // 10,000,000,000.00
+ * 金额每三位正数添加逗号，支持保留小数
+ * @example
+ * ```js
+ * toDecimal(10000000000000, 2) // 10,000,000,000.00
+ * ```
  *
  * @param {string/number} textt - 需要被替换的文本
  * @param {number} len - 保留小数位数

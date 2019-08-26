@@ -57,8 +57,7 @@ ${o}`
     })
   }
   if (examples) {
-    examples = `
-##### 示例：
+    examples = `##### 示例：
 ${examples}`
   }
   let returnType = ''
@@ -90,19 +89,23 @@ ${examples}`
 
   paramStr = returnType ? `(${paramStr}) => ${returnType.replace(/\./gi, '')}` : `(${paramStr})`
 
-  paramList = paramList ? `
-##### 形参列表：
+  paramList = paramList ? `##### 形参列表：
 | 参数 | 类型  |  默认值         | 描述 |
-| :--- | :---- | :------------- |:---- |${paramList}` : ''
+| :--- | :---- | :------------- |:---- |
+${paramList}` : ''
 
   returnType = returnType ? `
 ##### 返回值：${returnType.replace(/\//gi, '|')}` : ''
 
-  return `### <span id="${item.name}">✅ ${item.name}${paramStr}</span>
+  return `### <span id="${item.name}">♥ ${item.name}${paramStr}</span>
 &emsp;&emsp;${item.description}
+
 ${paramList}
+
 ${returnType}
+
 ${examples}
+
 [▲ 回顶部](#top)`
 }
 

@@ -1,4 +1,5 @@
 import nodeResolve from 'rollup-plugin-node-resolve'
+import banner from 'rollup-plugin-banner'
 
 import pkg from './package.json'
 import commonjs from 'rollup-plugin-commonjs'
@@ -8,13 +9,12 @@ import typescript from 'rollup-plugin-typescript'
 import json from 'rollup-plugin-json';
 
 
-const banner =
-  `/*!
- * es-aux.js v${pkg.version}
- * (c) 2019-${new Date().getFullYear()} staven
- * https://github.com/staven630/es-aux
- * Released under the MIT License.
- */`
+const bannerTemplate =
+  `es-aux.js v${pkg.version}
+(c) 2019-${new Date().getFullYear()} staven
+https://github.com/staven630/es-aux
+Released under the MIT License.
+`
 
 const terserPlugin = terser({
   output: {
@@ -56,12 +56,12 @@ export default [
       file: pkg.main,
       format: 'cjs',
       indent: false,
-      banner,
     },
     external,
     plugins: [
       ...plugins,
-      terserPlugin
+      terserPlugin,
+      banner(bannerTemplate)
     ]
   },
   {
@@ -70,12 +70,12 @@ export default [
       file: pkg.module,
       format: 'es',
       indent: false,
-      banner,
     },
     external,
     plugins: [
       ...plugins,
-      terserPlugin
+      terserPlugin,
+      banner(bannerTemplate)
     ]
   },
   {
@@ -85,12 +85,12 @@ export default [
       format: 'umd',
       indent: false,
       name: 'Aux',
-      banner,
     },
     external,
     plugins: [
       ...plugins,
-      terserPlugin
+      terserPlugin,
+      banner(bannerTemplate)
     ]
   },
   {

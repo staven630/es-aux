@@ -24,8 +24,7 @@ import { camelToKebab } from 'es-aux'
 ### 字符串相关
 * [divideText: 以某字符分隔字符串](https://github.com/staven630/es-aux/blob/master/docs/string.md#divideText)
 * [spliceText: 隐藏/替换字符串中间几位](https://github.com/staven630/es-aux/blob/master/docs/string.md#spliceText)
-* [toDecimal: 金额每三位正数添加逗号(支持保留小数)
-eg: toDecimal(10000000000000, 2) // 10,000,000,000.00](https://github.com/staven630/es-aux/blob/master/docs/string.md#toDecimal)
+* [toDecimal: 金额每三位正数添加逗号，支持保留小数](https://github.com/staven630/es-aux/blob/master/docs/string.md#toDecimal)
 * [sortJSON: 根据对象数组的某字段进项排序](https://github.com/staven630/es-aux/blob/master/docs/string.md#sortJSON)
 * [camelToKebab: 驼峰命名转换为短横线命名](https://github.com/staven630/es-aux/blob/master/docs/string.md#camelToKebab)
 * [kebabToCamel: 短横线命名转换为驼峰命名](https://github.com/staven630/es-aux/blob/master/docs/string.md#kebabToCamel)
@@ -33,9 +32,7 @@ eg: toDecimal(10000000000000, 2) // 10,000,000,000.00](https://github.com/staven
 * [randomString: 随机生成长度为len的字符串](https://github.com/staven630/es-aux/blob/master/docs/string.md#randomString)
 * [getHighlightList: 获取高亮分词列表](https://github.com/staven630/es-aux/blob/master/docs/string.md#getHighlightList)
 * [getHighlightTemplate: 获取高亮分词模板](https://github.com/staven630/es-aux/blob/master/docs/string.md#getHighlightTemplate)
-* [getHighlight: 获取高亮分词
-具有tag参数，则返回该参数包裹的字符串
-否则返回数组对象](https://github.com/staven630/es-aux/blob/master/docs/string.md#getHighlight)
+* [getHighlight: 获取高亮分词具有tag参数，则返回该参数包裹的字符串否则返回数组对象](https://github.com/staven630/es-aux/blob/master/docs/string.md#getHighlight)
 ### 数组
 * [unionArr: 求数组并集](https://github.com/staven630/es-aux/blob/master/docs/array.md#unionArr)
 * [intersectArr: 求数组交集](https://github.com/staven630/es-aux/blob/master/docs/array.md#intersectArr)
