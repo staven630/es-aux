@@ -104,14 +104,11 @@ ${examples}`
   return `### <span id="${item.name}">♥ ${item.name}${paramStr}</span>
 
 &emsp;&emsp;${item.description}
-
 ${paramList}
-
 ${returnType}
-
 ${examples}
 
-[▲ 回顶部](#top)
+###### [▲ 回顶部](#top)
 ---
 `
 }
@@ -134,8 +131,7 @@ for (const type in templateList) {
     readmeStr = renderFnList(item, readmeStr, filepath)
     doc = `${doc}
 * [ ${item.name}: ${item.description}](#${item.name})`
-    docList = `${docList}
-${renderDoc(item)}`
+    docList = `${docList}${renderDoc(item)}`
   }
   readme = `${readme}
 ${readmeStr}`

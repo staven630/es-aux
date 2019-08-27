@@ -12,9 +12,8 @@
  * @returns {string}
  */
 export function divideText(text: string | number, len: number, replaceText = ',') {
-  text = text.toString()
-  const reg = new RegExp('(\\d)(?=(?:\\d{' + len + '})+$)', 'g')
-  return text.replace(reg, '$1' + replaceText)
+  const reg = new RegExp('(\\d)(?=(?:\\d{' + +len + '})+$)', 'g')
+  return `${text}`.replace(reg, '$1' + replaceText)
 }
 
 /**
@@ -31,9 +30,8 @@ export function divideText(text: string | number, len: number, replaceText = ','
  * @returns {string}
  */
 export function spliceText(text: string | number, start: number, last: number, replaceText: string) {
-  text = text.toString()
-  const reg = new RegExp('^(.{' + start + '})(?:\\d+)(.{' + last + '})$')
-  return text.replace(reg, '$1' + replaceText + '$2')
+  const reg = new RegExp('^(.{' + +start + '})(?:\\d+)(.{' + +last + '})$')
+  return `${text}`.replace(reg, '$1' + replaceText + '$2')
 }
 
 /**
@@ -49,7 +47,7 @@ export function spliceText(text: string | number, start: number, last: number, r
  */
 export function toDecimal(text: string | number, len: number) {
   text = text.toString()
-  if (/[^0-9.]/.test(text) || text == null || text == '') return 0
+  if (/[^0-9.]/.test(text) || text == null || text == '') return ''
   text = text.replace(/^(\d*)$/, '$1.')
   text = (text + '00').replace(/(\d*\.\d\d)\d*/, '$1')
   text = text.replace('.', ',')

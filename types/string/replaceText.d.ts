@@ -37,4 +37,4 @@ export declare function spliceText(text: string | number, start: number, last: n
  * @param {number} len - 保留小数位数
  * @returns {string}
  */
-export declare function toDecimal(text: string | number, len: number): string | 0;
+export declare function toDecimal(text: string | number, len: number): string;

@@ -13,9 +13,8 @@
  */
 export function divideText(text, len, replaceText) {
     if (replaceText === void 0) { replaceText = ','; }
-    text = text.toString();
-    var reg = new RegExp('(\\d)(?=(?:\\d{' + len + '})+$)', 'g');
-    return text.replace(reg, '$1' + replaceText);
+    var reg = new RegExp('(\\d)(?=(?:\\d{' + +len + '})+$)', 'g');
+    return ("" + text).replace(reg, '$1' + replaceText);
 }
 /**
  * 隐藏/替换字符串中间几位
@@ -31,9 +30,8 @@ export function divideText(text, len, replaceText) {
  * @returns {string}
  */
 export function spliceText(text, start, last, replaceText) {
-    text = text.toString();
-    var reg = new RegExp('^(.{' + start + '})(?:\\d+)(.{' + last + '})$');
-    return text.replace(reg, '$1' + replaceText + '$2');
+    var reg = new RegExp('^(.{' + +start + '})(?:\\d+)(.{' + +last + '})$');
+    return ("" + text).replace(reg, '$1' + replaceText + '$2');
 }
 /**
  * 金额每三位正数添加逗号，支持保留小数
@@ -49,7 +47,7 @@ export function spliceText(text, start, last, replaceText) {
 export function toDecimal(text, len) {
     text = text.toString();
     if (/[^0-9.]/.test(text) || text == null || text == '')
-        return 0;
+        return '';
     text = text.replace(/^(\d*)$/, '$1.');
     text = (text + '00').replace(/(\d*\.\d\d)\d*/, '$1');
     text = text.replace('.', ',');

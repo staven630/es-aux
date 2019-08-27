@@ -99,3 +99,5 @@ import { camelToKebab } from 'es-aux'
 * [getScrollTop: 获取页面滚动高度](https://github.com/staven630/es-aux/blob/master/docs/browser.md#getScrollTop)
 ### 函数相关
 * [memoize: 缓存函数调用结果](https://github.com/staven630/es-aux/blob/master/docs/function.md#memoize)
+* [debounce: 防抖函数](https://github.com/staven630/es-aux/blob/master/docs/function.md#debounce)
+* [throttle: 节流函数](https://github.com/staven630/es-aux/blob/master/docs/function.md#throttle)
