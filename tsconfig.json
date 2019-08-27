@@ -11,19 +11,10 @@
     "noImplicitReturns": true,
     "sourceMap": false,
     "outDir": "./types",
-    "lib": [
-      "dom",
-      "es7"
-    ],
-    "downlevelIteration": true,
+    "lib": ["dom", "es7"],
     "declaration": true, //生成相应的 .d.ts文件（类似Objc中的.h文件）
     "declarationDir": "./types" //单独为头文件指定存放的位置
   },
-  "include": [
-    "src/main.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "types/**"
-  ]
+  "include": ["src/main.ts"],
+  "exclude": ["node_modules", "types/**"]
 }
