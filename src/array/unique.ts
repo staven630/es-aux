@@ -6,8 +6,8 @@ import {isArray} from '../is'
  *
  * @param {Array} arr - 需要去重的数组
  */
-export function uniqueArr<T>(arr: T[]) {
-  return [...new Set(arr)]
+export function uniqueArr(arr: any[]) {
+  return Array.from(new Set(arr))
 }
 
 /**

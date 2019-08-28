@@ -3,7 +3,7 @@
  *
  * @param {Array} arr - 需要去重的数组
  */
-export declare function uniqueArr<T>(arr: T[]): T[];
+export declare function uniqueArr(arr: any[]): any[];
 /**
  * 对象数组单个键值匹配去重
  *
