@@ -5,5 +5,5 @@
  * @param {*} array - 需要判断的对象
  */
 export function isArray<T>(array: T) {
-  return String.prototype.toString.call(array) == '[object Array]'
+  return Object.prototype.toString.call(array) == '[object Array]'
 }
